@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>ONE DAY</title>
+        <style type="text/css">
+            body 
+            {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: black;
+            }
+        </style>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
+        <script src="player.js"></script>
+        <script src="scene.js"></script>
+        <script src="scene2.js"></script>
+        <script src="scene3.js"></script>
+        <script src="scene4.js"></script>
+        <script src="scenemenu.js"></script>
+        <script src="Menu_Button.js"></script>
+        <script src="scenewin.js"></script>
+        <script src="scenelose.js"></script>
+        <script src="enemy.js"></script>
+        <script src="ex.js"></script>
+    </head>
+    <body>
+        <script>
+            var config={
+                type:Phaser.AUTO,
+                zoom:4,
+                width:900,
+                height:427,
+                physics:{
+                    default:'arcade',
+                    arcade:{
+                        debug:false,
+                        gravity:{
+                            y:200,
+                        }
+                    }
+                },
+                scene:[Menu,Scene,Scene2,Scene3,Scene4,Win,Lose]
+            };
+            var game=new Phaser.Game(config);
+            </script>
+    </body>
+</html>
